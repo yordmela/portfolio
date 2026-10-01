@@ -162,13 +162,16 @@ section {
     }
 
     .first-project-wrapper {
-      @apply h-full flex flex-col justify-between xl:w-[60%];
+      @apply h-full flex flex-col justify-between xl:w-[60%] bg-transparent border-0 p-0;
+      color: inherit;
+      font: inherit;
+      text-align: left;
 
       .image-wrapper {
         @apply xl:h-[70vh] md:h-[50vh] h-96 relative;
 
         img {
-          @apply w-full h-full object-cover rounded-xl absolute inset-0;
+          @apply w-full h-full object-contain rounded-xl absolute inset-0;
         }
       }
 
@@ -187,6 +190,13 @@ section {
 
     .project-list-wrapper {
       @apply flex md:flex-row flex-col xl:flex-col gap-10 xl:w-[40%];
+
+      .project {
+        @apply bg-transparent border-0 p-0;
+        color: inherit;
+        font: inherit;
+        text-align: left;
+      }
 
       .image-wrapper {
         @apply xl:h-[37vh] md:h-52 lg:h-72 h-64 relative rounded-xl xl:px-5 2xl:px-12 py-0;
@@ -271,7 +281,7 @@ section {
   }
 
   .tech-grid {
-    @apply grid xl:grid-cols-5 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
+    @apply grid xl:grid-cols-3 md:grid-cols-3 grid-cols-1 xl:gap-16 md:gap-10 gap-5 mt-16;
   }
 
   .tech-icon-wrapper {
@@ -295,6 +305,29 @@ section {
         @apply inline-block;
       }
     }
+  }
+
+  .shot-frame {
+    @apply flex items-center justify-center p-3 md:p-4;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 68vh;
+      object-fit: contain;
+    }
+  }
+
+  .shot-frame-cover img {
+    max-height: 52vh;
   }
 
   .footer {
@@ -322,7 +355,32 @@ section {
   }
 }
 
-/* Hero text slider starts */
+.project-detail {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: clip;
+}
+
+.project-detail > div,
+.project-detail .shot-grid {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+.project-detail .shot-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .project-detail .shot-grid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 1.25rem;
+  }
+}
 .slide {
   display: inline-block;
   flex-direction: column;
