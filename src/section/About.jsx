@@ -14,8 +14,8 @@ const notes = [
     },
     {
         label: 'Also',
-        title: 'Freelance Flutter',
-        detail: 'Live order updates for a delivery app',
+        title: 'Freelance',
+        detail: 'UI/UX and Flutter, including a delivery app',
     },
     {
         label: 'Earlier',

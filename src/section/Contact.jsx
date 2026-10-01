@@ -13,6 +13,7 @@ const Contact = () => {
   })
 
   const [loading, setLoading] = useState(false)
+  const [status, setStatus] = useState(null)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -22,6 +23,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setLoading(true)
+    setStatus(null)
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -30,8 +32,10 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       )
       setFormData({ name: '', email: '', message: '' })
+      setStatus('sent')
     } catch (error) {
       console.error('Error sending email:', error)
+      setStatus('error')
     } finally {
       setLoading(false)
     }
@@ -108,6 +112,18 @@ const Contact = () => {
                     </div>
                   </div>
                 </button>
+                {status === 'sent' ? (
+                  <p className='text-white-50 text-center'>Message sent. I’ll reply by email.</p>
+                ) : null}
+                {status === 'error' ? (
+                  <p className='text-white-50 text-center'>
+                    That didn’t send. Email me at{' '}
+                    <a className='text-white underline underline-offset-4' href={`mailto:${contactInfo.email}`}>
+                      {contactInfo.email}
+                    </a>
+                    .
+                  </p>
+                ) : null}
               </form>
             </div>
           </div>
