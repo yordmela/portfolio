@@ -226,29 +226,29 @@ const projects = [
     id: "ashamlolie",
     title: "Ashamlolie",
     shortDescription:
-      "UI/UX contract work on an e-commerce product — from requirements and flows to interface decisions.",
+      "UI/UX for a delivery app, including the admin panel for roles such as branch manager and HQ admin.",
     category: "featured",
     tags: ["Product Design", "UI/UX", "Product Thinking"],
     coverImage: "/images/ashamlole/asham_lole_thumbnail.png",
     coverBg: "#eef2f5",
     shareScreenshots: true,
-    role: "UI/UX contract covering product discussions, flows, and interface design",
+    role: "UI/UX contract for the delivery app and its admin panel",
     overview:
-      "Ashamlolie is a product-design case study from a UI/UX contract engagement on an existing e-commerce website. The work was not only visual polish — it included conversations about what the product should be and how people move through it.",
+      "Ashamlolie is a delivery app. The UI/UX contract covered how customers move through the product, and the admin panel used by different roles — including branch manager, HQ admin, and others.",
     problem:
-      "An existing e-commerce experience needed clearer layouts, a stronger visual system, and more intentional user flows.",
+      "The delivery app needed clearer layouts and user flows, and the admin side needed interfaces for more than one role.",
     contribution:
-      "I improved layouts and visual design, refined the color system, worked through user flows, created Figma screens, and made product and interface recommendations.",
+      "I designed the delivery experience and the admin panel UI in Figma: layouts, the color system, user flows, and interface recommendations for roles including branch manager and HQ admin.",
     process: [
       "Client discussions around requirements and product direction",
-      "Clarifying what needed to change in the experience",
-      "Mapping user flows",
+      "Mapping user flows for the delivery experience",
+      "Defining what each role needs in the admin panel, including branch manager and HQ admin",
       "Layout and interface decisions in Figma",
-      "Color system and visual design improvements",
+      "Color system and visual design",
       "Product and interface recommendations",
     ],
     productThinking:
-      "This project shows how I move from understanding requirements and product direction into user flows and concrete UI — not only delivering screens.",
+      "This project shows how I move from requirements into user flows and concrete UI — for customers using the delivery app, and for the different roles in the admin panel.",
     gallery: [
       "/images/ashamlole/Home.png",
       "/images/ashamlole/image1.png",
