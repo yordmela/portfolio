@@ -117,11 +117,7 @@ const Contact = () => {
                 ) : null}
                 {status === 'error' ? (
                   <p className='text-white-50 text-center'>
-                    That didn’t send. Email me at{' '}
-                    <a className='text-white underline underline-offset-4' href={`mailto:${contactInfo.email}`}>
-                      {contactInfo.email}
-                    </a>
-                    .
+                    That didn’t send. Email {contactInfo.email}.
                   </p>
                 ) : null}
               </form>
